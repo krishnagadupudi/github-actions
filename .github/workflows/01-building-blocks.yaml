@@ -19,7 +19,7 @@ jobs:
       - name: failed step 
         run: |
           echo "Hello, World! failed!"
-          exit 1
+          exit 0
   echo-goodbye-again:
     runs-on: ubuntu-latest
     steps:
