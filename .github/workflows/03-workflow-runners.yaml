@@ -3,10 +3,17 @@ name: 03 - workflow runners
 on: push
 
 jobs:
-  echo:
+  ubuntu-echo:
     runs-on: ubuntu-latest
     steps:
       - name: show the runner
         run: |
-          echo "Jobs is running on the ubuntu os runner"
-          echo "The workflow is running on ${{ runner.os }}."
+          echo "Jobs is running on the ubuntu runner"
+          echo "Runner OS is: ${{ runner.os }}."
+  windows-echo:
+    runs-on: windows-latest
+    steps:
+      - name: show the runner
+        run: |
+          echo "Jobs is running on the windows runner"
+          echo "Runner OS is: ${{ runner.os }}."
